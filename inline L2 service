@@ -1,0 +1,33 @@
+inline L2 service
+
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_ACCEPTED>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 TCP from 10.20.0.60_55705 to 103.235.46.40_443 L7 1
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: phase=2 ipproto=t src=10.20.0.60 dst=103.235.46.40 port=443 ptcl=1 names=www.baidu.com
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: ruleno2src=
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: result= _all; found no source addr match.
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 client spoke TLS 31 Client Hello 517 bytes, SNI='www.baidu.com', L7 guess=1, pre-HS chain= _all Dfl
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 CLIENTSSL_SERVERHELLO_SEND state=15
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: phase=4 ipproto=t src=10.20.0.60 dst=103.235.46.40 port=443 ptcl=1 names=www.baidu.com
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: ruleno2src=
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 classify: result= _all; found no source addr match.
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 CLIENTSSL_SERVERHELLO_SEND state=16 chain=_all Dfl
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_HANDSHAKE>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 CLIENTSSL_HANDSHAKE state=16 www.baidu.com-TLSv1.2-ECDHE-RSA-AES128-GCM-SHA256-128
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_HANDSHAKE>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 CLIENTSSL_HANDSHAKE link to rc then  70.
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_ACCEPTED>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 exit (TLS 31) TCP 10.20.0.60_43946 to 103.235.46.40_443
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_ACCEPTED>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 link to 70 then .
+
+
+
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-ilS <CLIENT_ACCEPTED>: /Common/lj.app/lj-70-t-4 3463def1420b6b12e51a984eafd711c4 fireye-l2 It is L2 inline service, will go to selfip pool /Common/lj.app/lj-70  《《《《《《add by self
+
+Feb 11 23:36:45 bigip1 info tmm[12474]: Rule /Common/lj.app/lj-ilS <LB_SELECTED>: /Common/lj.app/lj-70-t-4 c19800b952a94c6fb67fee59ed03464f fireye-l2 reselect node and port=>103.235.46.40:443  reselect nexthop 198.19.0.30
+
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-ilS <SERVER_CONNECTED>: /Common/lj.app/lj-70-t-4 3463def1420b6b12e51a984eafd711c4 fireye-l2 scanning 10.20.0.60_43946 to 103.235.46.40_443 using 10.20.0.60_43946 to 103.235.46.40_8080 via 10.30.0.1
+
+
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-ilD <CLIENT_ACCEPTED>: /Common/lj.app/lj-70-D-0-t-4 3463def1420b6b12e51a984eafd711c4 fireye-l2 exit (TLS 31) TCP 10.20.0.60_43946 to 103.235.46.40_443
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 classify: phase=8 ipproto=t src=10.20.0.60 dst=103.235.46.40 port=443 ptcl=1 names=www.baidu.com
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 classify: ruleno2src=
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 classify: result= _all; found no source addr match.
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 3463def1420b6b12e51a984eafd711c4 client spoke first, reclassify yields _all Dfl
+Feb  8 03:48:08 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-ilD <SERVER_CONNECTED>: /Common/lj.app/lj-70-D-0-t-4 3463def1420b6b12e51a984eafd711c4 fireye-l2 SERVER_CONNECTED exit (TLS 31) TCP 10.20.0.60_43946 to 103.235.46.40_443 SNAT 10.30.0.100_46437
+Feb  8 03:48:09 bigip1 info tmm2[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_CLOSED>: /Common/lj.app/lj-in-t-4 3463def1420b6b12e51a984eafd711c4 TCP from 10.20.0.60_55705 to 103.235.46.40_443 (vice 103.235.46.40_443) L7 1 (TLS 31) chain _all duration 1511 msec

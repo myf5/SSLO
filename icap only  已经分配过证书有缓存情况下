@@ -1,0 +1,24 @@
+icap only  已经分配过证书有缓存情况下
+
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_ACCEPTED>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 TCP from 10.20.0.60_49920 to 103.235.46.39_443 L7 1
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: phase=2 ipproto=t src=10.20.0.60 dst=103.235.46.39 port=443 ptcl=1 names=www.baidu.com
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: ruleno2src=
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: result= _all; found no source addr match.
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_DATA>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 client spoke TLS 31 Client Hello 517 bytes, SNI='www.baidu.com', L7 guess=1, pre-HS chain= _all Dfl
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 CLIENTSSL_SERVERHELLO_SEND state=15
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: phase=4 ipproto=t src=10.20.0.60 dst=103.235.46.39 port=443 ptcl=1 names=www.baidu.com
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: ruleno2src=
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: result= _all; found no source addr match.
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_SERVERHELLO_SEND>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 CLIENTSSL_SERVERHELLO_SEND state=16 chain=_all Dfl
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_HANDSHAKE>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 CLIENTSSL_HANDSHAKE state=16 www.baidu.com-TLSv1.2-ECDHE-RSA-AES128-GCM-SHA256-128
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENTSSL_HANDSHAKE>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 CLIENTSSL_HANDSHAKE link to rc then  30.
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_ACCEPTED>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 exit (TLS 31) TCP 10.20.0.60_5010 to 103.235.46.39_443
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_ACCEPTED>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 link to 30 then .
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-ic <CLIENT_ACCEPTED>: /Common/lj.app/lj-30-t-4 8687f9b3d7ff5efb3ce211d376f39f94 icap exit (TLS 31) TCP 10.20.0.60_5010 to 103.235.46.39_443
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: phase=8 ipproto=t src=10.20.0.60 dst=103.235.46.39 port=443 ptcl=1 names=www.baidu.com
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: ruleno2src=
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 classify: result= _all; found no source addr match.
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-rc <CLIENT_DATA>: /Common/lj.app/lj-rc-t-4 8687f9b3d7ff5efb3ce211d376f39f94 client spoke first, reclassify yields _all Dfl
+Feb  7 22:51:44 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-ic <SERVER_CONNECTED>: /Common/lj.app/lj-30-t-4 8687f9b3d7ff5efb3ce211d376f39f94 icap SERVER_CONNECTED exit (TLS 31) TCP 10.20.0.60_5010 to 103.235.46.39_443 SNAT 10.30.0.100_62504
+Feb  7 22:51:45 bigip1 info tmm3[12001]: Rule /Common/lj.app/lj-in_t <CLIENT_CLOSED>: /Common/lj.app/lj-in-t-4 8687f9b3d7ff5efb3ce211d376f39f94 TCP from 10.20.0.60_49920 to 103.235.46.39_443 (vice 103.235.46.39_443) L7 1 (TLS 31) chain _all duration 1070 msec
+
